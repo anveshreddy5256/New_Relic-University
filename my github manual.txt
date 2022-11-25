@@ -1,0 +1,282 @@
+Basic commands in git:
+
+You can go for amazonlinux,unbuntu etc.
+
+We r gng to create a local repository inside our machine and gng push our code created inside the working directory into the github account.
+
+So for that i created github account and inside that we are gng to create a repository but before that we need to create a local repository 
+bcz whatever we push to github repository that is from local repository
+
+ec2-user]
+note: become a root user by typing sudo sudo
+now we are gng to instqll in  our system:
+
+root] yum install git -y
+=====================
+
+git -v
+===================
+
+now iam creating a working directory inside our machine:
+If you are a user and you are one of the developer and ur gng to push code into central 
+repository you will be dng task from your local maching that is your laptop itself so if laptop is having windows os you will install git inside 
+the command prompt and you will be pushing the code to the central repository that means if you want to identify yourself as a user u need to 
+configure 
+
+git config --global user.name "anveshreddy5256"
+git config --global user.email "anveshreddy5256@gmail.com"
+=========================================================
+
+Now we have configured  that user 
+
+and using this u can be a local or global user
+
+
+git config --list    to list all the user inside the local machine
+=========================
+
+To get into any command what are the options availble with gitconfig then type git config --help press q to quit.
+
+Now iam going to create a directory  that will be my local directory and inside that dir i am going to create all contents requ for my website
+
+mkdir demo
+
+ls
+
+cd demo
+
+ls
+
+demo] cd /root
+
+ I am to create a local repository inside the local machine
+
+git init
+
+Output: you will get as below when git is already created in any other directory.
+Reinitiatedd exiting file in /root/.git
+
+cd /
+
+
+/] mkdir workdir
+
+ls
+
+cd workdir
+
+ls
+
+cd /
+
+/]git init and press enter the below output you will get when it is not created in any directory.
+
+Output as :-initialized empty git repository- Th
+
+ls -a 
+
+.git dir will be there 
+
+/]cd workdir
+
+cat  > file1
+Hi ! This is Anvesh
+ctrl+c
+
+cd /
+
+git status --which are the files are in staging area or which files are committed.
+=================
+then you can find red color directories
+
+nothing added to commit we will be default in master branch
+
+now iam going to add files to  the staging area and from there im going to make a commit of that files to the git(local repository that i 
+
+created using git init cmd from there iam gong to push that file to the central repository
+
+/to add files or directory to the staging area by the below command
+
+/]git add workdir/file1  and press enter so file1 is added to the staging area and to check whether it is added to the staging area you can check
+with the git status command.
+======================================
+
+
+git status
+=============
+
+1 file is added to the staging area
+
+Now one file is added to the staging area 
+
+and Whenever you commmit that file  one copy of snapshot will be taken inside the git repository that is the local repository that means if you delete 
+the file/directory from the central repository a copy will reside in the local repository.
+
+Even though you have pushed the code to the central repository and you have deletd that file from central repository and u can come to local repository 
+ using the  commit id you can still see a file there 
+
+
+Inorder to commit the file  use  the command stated below:
+
+git commit -m "committing file1 from workdir for the first time"
+===========================================
+you can see the following output after running the above command
+
+i file changed i inserted 
+create mode: workdir/file1
+
+note: Whenever you are committing a file commit  it with a message.
+
+git status: again to check whether the file is committed or not.
+============
+nothing added to commit
+no file will be there and everything will be in red.
+
+now you have committed something to local repository and you want to add particular commit to the github repository which is a centralized 
+repository.
+
+first you need to create a repository inside the github account so go to profile and click on repositories click on new and give repository name as 
+workrepo here and ok you can give any description and you can make it public so that anyone can clone the code or fork or copy the code and 
+click on create repository abd now repository is created with workrepo.
+
+now inside the ''workrepo 
+
+now iam going to push that commit to my workrepo and for that purpose we need to do is that we need to do is that we need to associate github 
+account with the local machine and for that use the command below.
+
+
+/]   git remote add origin "https://github.com/anveshreddy5256/workrepo" and press enter
+
+===========================
+
+now particular repository is being added as an origin  inside our root directory.
+
+You will a url when you create a repository inside the github account and when you open it in the url you can get that url of that repository. 
+
+örigin means the central repository that means the repository created in github account that means we are telling that 
+
+there is a remote repository we call that as an  origin and we are going to give a url that url is going to specify which is our origin(nothing
+but a central repository)
+
+Before pushing  files something to the central repository we are going to add that repository(work repo) inside our local machine.
+
+Now i need to push or commit to central repository(here it is workrepo) using the below command.
+
+we are currently in the master branch and whatever the commmit we have made in the master branch we are going to push into the origin repository ie.
+work repo by giving the below command.
+
+git push origin master and press enter .
+=====================================
+It will ask for username :anveshreddy5256 (as m)and enter then it asks for password and inorder to give
+the password inorder to do that you need to upload tokens.
+
+for that go to github account>>settings>>Developer Settings>>Personal Access Tokens>> click on Generate new token it will ask for your password
+then give the password of Github account and confirm and give an note as as anyname, expiration 30 days , select scopes and iam selecting all 
+and click on 'Generate Token'and under personal access tokens you can able to see your token and copy the token and come back to linux and paste but 
+when you paste the token it is invisible or hidden and press enter 
+
+you will get an output as below:
+Enumerating objects: 4 done
+counting objects: 100%
+writing objects: 100% 
+
+Now go to Github account and open the central repository and you will find a directory with workdir and when you open that you can find file1 
+and if you open file1 you can be able to view the content inside the file1.
+
+Conclusion:
+===========
+This is how you connect your local repository(.git) with your github repository(ie., a central repository)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
